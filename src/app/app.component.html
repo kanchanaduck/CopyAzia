@@ -1,0 +1,21 @@
+<!-- <div>
+  <app-header *ngIf="showHeader"></app-header>
+  <div class="az-content-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer *ngIf="showFooter"></app-footer>
+</div>
+ -->
+
+<div class="az-body az-body-sidebar">
+  <!-- <app-sidebar></app-sidebar> -->
+  
+  <app-sidebar *ngIf="showHeader"></app-sidebar>
+  <div class="az-content">
+    <app-header *ngIf="showHeader"></app-header>
+    <div class="az-content-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer *ngIf="showFooter"></app-footer>
+  </div>
+</div>

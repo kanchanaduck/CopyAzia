@@ -1,0 +1,132 @@
+<div class="az-sidebar">
+  <div class="az-sidebar-header">
+    <a href="index.html" class="az-logo">HRGIS</a>
+  </div><!-- az-sidebar-header -->
+  <div class="az-sidebar-loggedin">
+    <div class="az-img-user online"><img src="assets/images/img1.jpg" alt=""></div>
+    <div class="media-body">
+      <h6>Noppamas T.</h6>
+      <span>IT Administrator</span>
+    </div><!-- media-body -->
+  </div><!-- az-sidebar-loggedin -->
+  <div class="az-sidebar-body">
+    <ul class="nav">
+      <li class="nav-label mb-3">Main Menu</li>
+      <!-- <li class="nav-item active show" [ngClass]="{ 'active': dashboard.isActive }">
+        <a routerLink="/dashboard" routerLinkActive="active" #dashboard="routerLinkActive" class="nav-link">
+          <i class="typcn typcn-clipboard"></i>Dashboard
+        </a>
+        
+      </li> --><!-- nav-item -->
+      <!-- <li *ngFor="let menu of menus" class="nav-item show" [ngClass]="{'active': menu.url == 'welfare'}" > 
+        <a  routerLink="/welfare/welfare" class="nav-link">
+          {{menu.menu_name}}
+          <div *ngIf="(menu.url == 'welfare')" class="badge badge-danger badge-pill">Active</div>
+        </a>
+      </li> -->
+      <!-- <a *ngFor="let menu of menus" routerLink="/welfare" class="nav-link tx-sm" ngClass="{'active': menu.url == 'welfare'}"> -->
+        <a *ngFor="let menu of menus" routerLink="/welfare"  class="nav-link" [ngClass]="{'active': menu.url == 'welfare'}">
+        {{menu.menu_name}}
+        <div *ngIf="(menu.url == 'welfare')" class="badge badge-danger badge-pill">Active</div>
+      </a>
+      <!-- <li class="nav-item">
+        <a class="nav-link with-sub" id="nav-link-1" class="active"><i class="typcn typcn-document"></i>Apps & Pages</a>
+        <ul class="nav-sub" [ngbCollapse]="parentId !== 'nav-link-1'">
+          <li *ngFor="let menu of menus" class="nav-sub-item">
+            <a routerLink="/general-pages/page-404" class="nav-sub-link">{{menu.menu_name}}</a>
+          </li> -->
+          <!-- <li class="nav-sub-item" [ngClass]="{ 'active': email.isActive }"><a routerLink="/apps/email" class="nav-sub-link" routerLinkActive="active" #email="routerLinkActive">Mailbox</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': chat.isActive }"><a routerLink="/apps/chat" class="nav-sub-link" routerLinkActive="active" #chat="routerLinkActive">Chat</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': calendar.isActive }"><a routerLink="/apps/calendar" class="nav-sub-link" routerLinkActive="active" #calendar="routerLinkActive">Calendar</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': contacts.isActive }"><a routerLink="/apps/contacts" class="nav-sub-link" routerLinkActive="active" #contacts="routerLinkActive">Contacts</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': profile.isActive }"><a routerLink="/general-pages/profile" class="nav-sub-link" routerLinkActive="active" #profile="routerLinkActive">Profile</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': invoice.isActive }"><a routerLink="/general-pages/invoice" class="nav-sub-link" routerLinkActive="active" #invoice="routerLinkActive">Invoice</a></li>
+          <li class="nav-sub-item"><a routerLink="/general-pages/signin" class="nav-sub-link">Sign In</a></li>
+          <li class="nav-sub-item"><a routerLink="/general-pages/signup" class="nav-sub-link">Sign Up</a></li>
+          <li class="nav-sub-item"><a routerLink="/general-pages/page-404" class="nav-sub-link">Page 404</a></li> -->
+        <!-- </ul>
+      </li> --><!-- nav-item -->
+      <!-- <li class="nav-item">
+        <a class="nav-link with-sub" (click)="clickedMenu($event)" id="nav-link-1" [ngClass]="{ 'active': email.isActive || chat.isActive || calendar.isActive || contacts.isActive || profile.isActive || invoice.isActive }"><i class="typcn typcn-document"></i>Apps & Pages</a>
+        <ul class="nav-sub" [ngbCollapse]="parentId !== 'nav-link-1'">
+          <li class="nav-sub-item" [ngClass]="{ 'active': email.isActive }"><a routerLink="/apps/email" class="nav-sub-link" routerLinkActive="active" #email="routerLinkActive">Mailbox</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': chat.isActive }"><a routerLink="/apps/chat" class="nav-sub-link" routerLinkActive="active" #chat="routerLinkActive">Chat</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': calendar.isActive }"><a routerLink="/apps/calendar" class="nav-sub-link" routerLinkActive="active" #calendar="routerLinkActive">Calendar</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': contacts.isActive }"><a routerLink="/apps/contacts" class="nav-sub-link" routerLinkActive="active" #contacts="routerLinkActive">Contacts</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': profile.isActive }"><a routerLink="/general-pages/profile" class="nav-sub-link" routerLinkActive="active" #profile="routerLinkActive">Profile</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': invoice.isActive }"><a routerLink="/general-pages/invoice" class="nav-sub-link" routerLinkActive="active" #invoice="routerLinkActive">Invoice</a></li>
+          <li class="nav-sub-item"><a routerLink="/general-pages/signin" class="nav-sub-link">Sign In</a></li>
+          <li class="nav-sub-item"><a routerLink="/general-pages/signup" class="nav-sub-link">Sign Up</a></li>
+          <li class="nav-sub-item"><a routerLink="/general-pages/page-404" class="nav-sub-link">Page 404</a></li>
+        </ul>
+      </li --><!-- nav-item -->
+      <!-- <li class="nav-item">
+        <a class="nav-link with-sub" (click)="clickedMenu($event)" id="nav-link-2" [ngClass]="{ 'active': accordions.isActive }"><i class="typcn typcn-book"></i>UI Elements</a>
+        <ul class="nav-sub" [ngbCollapse]="parentId !== 'nav-link-2'">
+          <li class="nav-sub-item" [ngClass]="{ 'active': accordions.isActive }"><a routerLink="/ui-elements/accordions" class="nav-sub-link" routerLinkActive="active" #accordions="routerLinkActive">Accordion</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': alerts.isActive }"><a routerLink="/ui-elements/alerts" class="nav-sub-link" routerLinkActive="active" #alerts="routerLinkActive">Alerts</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': avatar.isActive }"><a routerLink="/ui-elements/avatar" class="nav-sub-link" routerLinkActive="active" #avatar="routerLinkActive">Avatar</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': badges.isActive }"><a routerLink="/ui-elements/badges" class="nav-sub-link" routerLinkActive="active" #badges="routerLinkActive">Badge</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': breadcrumbs.isActive }"><a routerLink="/ui-elements/breadcrumbs" class="nav-sub-link" routerLinkActive="active" #breadcrumbs="routerLinkActive">Breadcrumbs</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': buttons.isActive }"><a routerLink="/ui-elements/buttons" class="nav-sub-link" routerLinkActive="active" #buttons="routerLinkActive">Buttons</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': cards.isActive }"><a routerLink="/ui-elements/cards" class="nav-sub-link" routerLinkActive="active" #cards="routerLinkActive">Cards</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': carousel.isActive }"><a routerLink="/ui-elements/carousel" class="nav-sub-link" routerLinkActive="active" #carousel="routerLinkActive">Carousel</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': collapse.isActive }"><a routerLink="/ui-elements/collapse" class="nav-sub-link" routerLinkActive="active" #collapse="routerLinkActive">Collapse</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': dropdown.isActive }"><a routerLink="/ui-elements/dropdown" class="nav-sub-link" routerLinkActive="active" #dropdown="routerLinkActive">Dropdown</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': icons.isActive }"><a routerLink="/ui-elements/icons" class="nav-sub-link" routerLinkActive="active" #icons="routerLinkActive">Icons</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': images.isActive }"><a routerLink="/ui-elements/images" class="nav-sub-link" routerLinkActive="active" #images="routerLinkActive">Images</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': listGroup.isActive }"><a routerLink="/ui-elements/list-group" class="nav-sub-link" routerLinkActive="active" #listGroup="routerLinkActive">List Group</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': mediaObject.isActive }"><a routerLink="/ui-elements/media-object" class="nav-sub-link" routerLinkActive="active" #mediaObject="routerLinkActive">Media Object</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': modals.isActive }"><a routerLink="/ui-elements/modals" class="nav-sub-link" routerLinkActive="active" #modals="routerLinkActive">Modals</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': navigation.isActive }"><a routerLink="/ui-elements/navigation" class="nav-sub-link" routerLinkActive="active" #navigation="routerLinkActive">Navigation</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': pagination.isActive }"><a routerLink="/ui-elements/pagination" class="nav-sub-link" routerLinkActive="active" #pagination="routerLinkActive">Pagination</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': popover.isActive }"><a routerLink="/ui-elements/popover" class="nav-sub-link" routerLinkActive="active" #popover="routerLinkActive">Popover</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': progress.isActive }"><a routerLink="/ui-elements/progress" class="nav-sub-link" routerLinkActive="active" #progress="routerLinkActive">Progress</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': spinners.isActive }"><a routerLink="/ui-elements/spinners" class="nav-sub-link" routerLinkActive="active" #spinners="routerLinkActive">Spinners</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': toast.isActive }"><a routerLink="/ui-elements/toast" class="nav-sub-link" routerLinkActive="active" #toast="routerLinkActive">Toast</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': tooltip.isActive }"><a routerLink="/ui-elements/tooltip" class="nav-sub-link" routerLinkActive="active" #tooltip="routerLinkActive">Tooltip</a></li>
+        </ul>
+      </li> --><!-- nav-item -->
+      <!-- <li class="nav-item">
+        <a class="nav-link with-sub" (click)="clickedMenu($event)" id="nav-link-3"><i class="typcn typcn-edit"></i>Forms</a>
+        <ul class="nav-sub" [ngbCollapse]="parentId !== 'nav-link-3'">
+          <li class="nav-sub-item" [ngClass]="{ 'active': formElements.isActive }"><a routerLink="/form/form-elements" class="nav-sub-link" routerLinkActive="active" #formElements="routerLinkActive">Form Elements</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': formLayouts.isActive }"><a routerLink="/form/form-layouts" class="nav-sub-link" routerLinkActive="active" #formLayouts="routerLinkActive">Form Layouts</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': formValidatoin.isActive }"><a routerLink="/form/form-validation" class="nav-sub-link" routerLinkActive="active" #formValidatoin="routerLinkActive">Form Validation</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': formWizards.isActive }"><a routerLink="/form/form-wizards" class="nav-sub-link" routerLinkActive="active" #formWizards="routerLinkActive">Form Wizards</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': wysiwygEditor.isActive }"><a routerLink="/form/wysiwyg-editor" class="nav-sub-link" routerLinkActive="active" #wysiwygEditor="routerLinkActive">WYSIWYG Editor</a></li>
+        </ul>
+      </li> --><!-- nav-item -->
+      <!-- <li class="nav-item">
+        <a class="nav-link with-sub" (click)="clickedMenu($event)" id="nav-link-4"><i class="typcn typcn-chart-bar-outline"></i>Charts</a>
+        <ul class="nav-sub" [ngbCollapse]="parentId !== 'nav-link-4'">
+          <li class="nav-sub-item" [ngClass]="{ 'active': morris.isActive }"><a routerLink="/charts/morris" routerLinkActive="active" #morris="routerLinkActive" class="nav-sub-link">Morris Charts</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': chartjs.isActive }"><a routerLink="/charts/chartjs" routerLinkActive="active" #chartjs="routerLinkActive" class="nav-sub-link">ChartJS</a></li>
+        </ul>
+      </li> --><!-- nav-item -->
+      <!-- <li class="nav-item">
+        <a class="nav-link with-sub" (click)="clickedMenu($event)" id="nav-link-5"><i class="typcn typcn-tabs-outline"></i>Tables</a>
+        <ul class="nav-sub" [ngbCollapse]="parentId !== 'nav-link-5'">
+          <li class="nav-sub-item" [ngClass]="{ 'active': basicTables.isActive }"><a routerLink="/tables/basic-tables" routerLinkActive="active" #basicTables="routerLinkActive" class="nav-sub-link">Basic Tables</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': dataTables.isActive }"><a routerLink="/tables/data-tables" routerLinkActive="active" #dataTables="routerLinkActive" class="nav-sub-link">Data Tables</a></li>
+        </ul>
+      </li> --><!-- nav-item -->
+      <!-- <li class="nav-item">
+        <a class="nav-link with-sub" (click)="clickedMenu($event)" id="nav-link-6"><i class="typcn typcn-archive"></i>Utilities</a>
+        <ul class="nav-sub" [ngbCollapse]="parentId !== 'nav-link-6'">
+          <li class="nav-sub-item" [ngClass]="{ 'active': background.isActive }"><a routerLink="/utilities/background" routerLinkActive="active" #background="routerLinkActive" class="nav-sub-link">Background</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': border.isActive }"><a routerLink="/utilities/border" routerLinkActive="active" #border="routerLinkActive" class="nav-sub-link">Border</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': display.isActive }"><a routerLink="/utilities/display" routerLinkActive="active" #display="routerLinkActive" class="nav-sub-link">Display</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': flex.isActive }"><a routerLink="/utilities/flex" routerLinkActive="active" #flex="routerLinkActive" class="nav-sub-link">Flex</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': height.isActive }"><a routerLink="/utilities/height" routerLinkActive="active" #height="routerLinkActive" class="nav-sub-link">Height</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': margin.isActive }"><a routerLink="/utilities/margin" routerLinkActive="active" #margin="routerLinkActive" class="nav-sub-link">Margin</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': padding.isActive }"><a routerLink="/utilities/padding" routerLinkActive="active" #padding="routerLinkActive" class="nav-sub-link">Padding</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': position.isActive }"><a routerLink="/utilities/position" routerLinkActive="active" #position="routerLinkActive" class="nav-sub-link">Position</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': typography.isActive }"><a routerLink="/utilities/typography" routerLinkActive="active" #typography="routerLinkActive" class="nav-sub-link">Typography</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': width.isActive }"><a routerLink="/utilities/width" routerLinkActive="active" #width="routerLinkActive" class="nav-sub-link">Width</a></li>
+          <li class="nav-sub-item" [ngClass]="{ 'active': extras.isActive }"><a routerLink="/utilities/extras" routerLinkActive="active" #extras="routerLinkActive" class="nav-sub-link">Extras</a></li>
+        </ul>
+      </li> --><!-- nav-item -->
+    </ul><!-- nav -->
+  </div><!-- az-sidebar-body -->
+</div><!-- az-sidebar -->
