@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import axios from 'axios';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +12,8 @@ export class AppComponent implements OnInit {
   public layoutOption: string;
   showHeader:boolean = true;
   showFooter:boolean = false;
+
+
 
   constructor(private router: Router) {
     // Removing Sidebar, Navbar, Footer for Documentation, Error and Auth pages
@@ -32,7 +35,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-
+  
+    axios.interceptors.response.use(function (response) {
+      return response.data
+    })
     // navbar backdrop for mobile only
     const navbarBackdrop = document.createElement('div');
     navbarBackdrop.classList.add('az-navbar-backdrop');

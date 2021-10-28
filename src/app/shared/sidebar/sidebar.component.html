@@ -25,8 +25,8 @@
         </a>
       </li> -->
       <!-- <a *ngFor="let menu of menus" routerLink="/welfare" class="nav-link tx-sm" ngClass="{'active': menu.url == 'welfare'}"> -->
-        <a *ngFor="let menu of menus" routerLink="/welfare"  class="nav-link" [ngClass]="{'active': menu.url == 'welfare'}">
-        {{menu.menu_name}}
+        <a *ngFor="let menu of menus" routerLink="{{ menu.url }}"  class="nav-link" [ngClass]="{'active': menu.url == 'welfare'}">
+        {{ menu.menu_name }}
         <div *ngIf="(menu.url == 'welfare')" class="badge badge-danger badge-pill">Active</div>
       </a>
       <!-- <li class="nav-item">

@@ -18,8 +18,8 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
     SharedModule,
+    RouterModule.forChild(routes),
     DataTablesModule
   ]
 })

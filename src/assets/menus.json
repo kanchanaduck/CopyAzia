@@ -1,4 +1,18 @@
-[ 
+{
+  "data": 
+  [ 
+    {
+      "menu_code": "Users",
+      "menu_name": "User Management",
+      "parent_menu_code": null,
+      "description": null,
+      "url": "users",
+      "spare1": null,
+      "spare2": null,
+      "update_date": "2021-09-15T00:00:00",
+      "update_by": "014496",
+      "parent": null
+    },
     {
       "menu_code": "PA",
       "menu_name": "Employee Information Management",
@@ -12776,6 +12790,6 @@
           ]
         }
         ]
-      }
-    
+    }
   ]
+}

@@ -1,0 +1,40 @@
+<div class="az-content">
+    <div class="container-fluid">
+        <!-- <app-components-sidebar></app-components-sidebar> -->
+        <div class="az-content-body d-flex flex-column">
+            <!-- <app-breadcrumb></app-breadcrumb> -->
+            <h2 class="az-content-title">Users</h2>
+        
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-center">
+                        <input type="checkbox" name="employee[]" id="employee-check" 
+                            [checked]="isChecked">
+                    </th>
+                    <th>Employee No.</th>
+                    <th>Name</th>
+                    <th>Division</th>
+                    <th>Department</th>
+                    <th>BAND</th>
+                    <th>POSITION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of employees">
+                    <th class="text-center">
+                        <input type="checkbox" name="employee[]" value="{{ user.EMP_NO }}"
+                        [checked]="isChecked">
+                    </th>
+                    <td>{{ user.EMP_NO }}</td>
+                    <td>{{ user.GNAME_ENG+' '+user.FNAME_ENG }}</td>
+                    <td>{{ user.DIV_ABB_NAME }}</td>
+                    <td>{{ user.DEPT_ABB_NAME+'('+ user.DEPT_CODE +')' }}</td>
+                    <td>{{ user.BAND }}</td>
+                    <td>{{ user.POSN_ENAME }}</td>
+                </tr>
+            </tbody>
+        </table>
+            
+    </div>
+</div>

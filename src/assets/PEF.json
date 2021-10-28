@@ -1,4 +1,6 @@
-[
+{
+  "data": 
+  [
     {
     "menu_code": "PEF050_07A",
     "menu_name": "Bus Information Maintenance",
@@ -408,3 +410,4 @@
     "children": null
   }
 ]
+}
