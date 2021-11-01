@@ -27,9 +27,9 @@
                         [checked]="isChecked">
                     </th>
                     <td>{{ user.EMP_NO }}</td>
-                    <td>{{ user.GNAME_ENG+' '+user.FNAME_ENG }}</td>
+                    <td>{{ (user.GNAME_ENG === null)? '':user.GNAME_ENG+' '+user.FNAME_ENG }}</td>
                     <td>{{ user.DIV_ABB_NAME }}</td>
-                    <td>{{ user.DEPT_ABB_NAME+'('+ user.DEPT_CODE +')' }}</td>
+                    <td>{{ (user.DEPT_ABB_NAME === null)? '':user.DEPT_ABB_NAME+'('+ user.DEPT_CODE +')' }}</td>
                     <td>{{ user.BAND }}</td>
                     <td>{{ user.POSN_ENAME }}</td>
                 </tr>
