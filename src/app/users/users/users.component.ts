@@ -11,37 +11,66 @@ import { Employee } from 'src/app/interfaces/employee';
 export class UsersComponent implements OnInit {
 
   public employees: Employee[];
-  // public employees: any = {};
+  public selected_employees: String[];
   isChecked: boolean;
 
   constructor(@Inject('BASE_URL') baseUrl: string) {
     this.isChecked = false;
 
-    axios.get<Employee[]>(baseUrl + 'employee').then(result => {
-      this.employees = result.data;
-    })
-    .catch((error) => {
-      console.error(error);
-    })
-
-  }
-
-
-
-  ngOnInit(): void {
-
-    // axios.post<Employee[]>('http://cptsvs531:1000/middleware/oracle/hrms', 
-    // {
-    //   "command": "SELECT * FROM ADMIN.v_emp_data_all_cpt "+
-    //             "WHERE dept_code in ('1210','2105','2230')  "+
-    //             "ORDER BY div_cls, dept_code"
-    // })
-    // .then((response) => {
-    //   this.employees = response.data;
+    // axios.get<Employee[]>(baseUrl + 'employee').then(result => {
+    //   this.employees = result.data;
     // })
     // .catch((error) => {
     //   console.error(error);
     // })
+
+  }
+
+  checkValue(values:any):void {
+    console.log(values.currentTarget.checked);
+    console.log(values.target.defaultValue);
+    this.selected_employees.push(values.target.defaultValue)
+  }
+
+  getEmployees(@Inject('BASE_URL') baseUrl: string){
+    // var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+
+    // for (var i = 0; i < checkboxes.length; i++) {
+    //   // this.selected_employees.push(checkboxes[i])
+    //   console.log(checkboxes[i])
+    // }
+
+    // console.log(this.selected_employees);
+
+    for (var i = 0; i < this.selected_employees.length; i++) {
+      axios.post<Employee[]>(baseUrl + 'employee', 
+      {
+        "emp_no": this.selected_employees
+      })
+      .then((response) => {
+        this.employees = response.data;
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+    }
+    
+  }
+
+  ngOnInit(): void {
+
+    axios.post<Employee[]>('http://cptsvs531:1000/middleware/oracle/hrms', 
+    {
+      "command": "SELECT * FROM ADMIN.v_emp_data_all_cpt "+
+                "WHERE dept_code in ('1210','2105','2230')  "+
+                "ORDER BY div_cls, dept_code"
+    })
+    .then((response) => {
+      this.employees = response.data;
+    })
+    .catch((error) => {
+      console.error(error);
+    })
 
     // Send a POST request
     // axios({

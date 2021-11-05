@@ -4,7 +4,11 @@
         <div class="az-content-body d-flex flex-column">
             <!-- <app-breadcrumb></app-breadcrumb> -->
             <h2 class="az-content-title">Users</h2>
-        
+
+        <div class="mg-l-auto mb-2">
+            <button class="btn btn-az-primary" (click)="getEmployees()">Add</button>
+        </div>
+
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -24,7 +28,7 @@
                 <tr *ngFor="let user of employees">
                     <th class="text-center">
                         <input type="checkbox" name="employee[]" value="{{ user.EMP_NO }}"
-                        [checked]="isChecked">
+                        (change)="checkValue($event)">
                     </th>
                     <td>{{ user.EMP_NO }}</td>
                     <td>{{ (user.GNAME_ENG === null)? '':user.GNAME_ENG+' '+user.FNAME_ENG }}</td>
@@ -35,6 +39,8 @@
                 </tr>
             </tbody>
         </table>
+
+
             
     </div>
 </div>

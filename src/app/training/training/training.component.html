@@ -1,0 +1,96 @@
+
+<div class="az-content">
+    <div class="container-fluid">
+        <!-- <app-components-sidebar></app-components-sidebar> -->
+        <div class="az-content-body d-flex flex-column">
+            <!-- <app-breadcrumb></app-breadcrumb> -->
+            <h2 class="az-content-title">Training Master Control</h2>
+
+            <div id="accordion" class="accordion" role="tablist" aria-multiselectable="true">
+                <div class="card">
+                  <div class="card-header" role="tab" id="headingOne">
+                    <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Making a Beautiful CSS3 Button Set
+                    </a>
+                  </div><!-- ./card-header -->
+    
+                  <div id="collapseOne" data-parent="#accordion" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="card-body">
+                        
+                        <div>
+                            <div class="wd-sm-300">
+                              <div class="d-md-flex mg-b-20">
+                                <div class="form-group mg-b-0">
+                                  <label class="form-label">Firstname: <span class="tx-danger">*</span></label>
+                                  <input type="text" name="firstname" class="form-control wd-250" placeholder="Enter firstname" required>
+                                </div><!-- form-group -->
+                                <div class="form-group mg-b-0 mg-md-l-20 mg-t-20 mg-md-t-0">
+                                  <label class="form-label">Lastname: <span class="tx-danger">*</span></label>
+                                  <input type="text" name="lastname" class="form-control wd-250" placeholder="Enter lastname" required>
+                                </div><!-- form-group -->
+                              </div><!-- d-flex -->
+                              <button type="submit" class="btn btn-az-primary pd-x-20">Validate Form</button>
+                            </div>
+                          </div>
+
+                    </div><!-- /.card-body -->
+                  </div><!-- /.collapse -->
+                </div><!-- /.card -->
+            </div><!-- /.accordion -->
+
+        <table datatable [dtOptions]="dtOptions" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Course No.</th>
+                    <th>Thai Course Name</th>
+                    <th>English Course Name</th>
+                    <th>Model</th>
+                    <th>Start date</th>
+                    <th>End date</th>
+                    <th>Time in</th>
+                    <th>Time out</th>
+                    <th>Place</th>
+                    <th>Trainer</th>
+                    <th>Manage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tx-13">BOI-001-001</td>
+                    <td class="tx-13">N/G PART SUPPLY HANDLING IN THE CORRECT WAY</td>
+                    <td class="tx-13">การจัดการเกี่ยวกับ PART NG ที่ส่งให้คู่ค้าอย่างถูกวิธี</td>
+                    <td class="tx-13"></td>
+                    <td class="tx-13">19032018</td>
+                    <td class="tx-13">19032018</td>
+                    <td class="tx-13">10.10</td>
+                    <td class="tx-13">11.40</td>
+                    <td class="tx-13">VIP ROOM</td>
+                    <td class="tx-13">K.NUCHJAREE  N. (ITC)</td>
+                    <td class="tx-13 text-center">
+                        <a href=""><i class="far fa-edit"></i></a>
+                        <a href=""><i class="far fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tx-13">BOI-001-002</td>
+                    <td class="tx-13">N/G PART SUPPLY HANDLING IN THE CORRECT WAY</td>
+                    <td class="tx-13">การจัดการเกี่ยวกับ PART NG ที่ส่งให้คู่ค้าอย่างถูกวิธี</td>
+                    <td class="tx-13"></td>
+                    <td class="tx-13">19032018</td>
+                    <td class="tx-13">19032018</td>
+                    <td class="tx-13">10.10</td>
+                    <td class="tx-13">11.40</td>
+                    <td class="tx-13">VIP ROOM</td>
+                    <td class="tx-13">K.NUCHJAREE  N. (ITC)</td>
+                    <td class="tx-13 text-center">
+                        <a href=""><i class="far fa-edit"></i></a>
+                        <a href=""><i class="far fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+            
+    </div>
+</div>
