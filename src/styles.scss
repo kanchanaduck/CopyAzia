@@ -145,7 +145,6 @@
 /* ############### CUSTOM ELEMENT STYLES ############### */
 @import "./assets/scss/custom/buttons";
 @import "./assets/scss/custom/charts";
-@import "./assets/scss/custom/dataTables";
 @import "./assets/scss/custom/forms";
 @import "./assets/scss/custom/image";
 @import "./assets/scss/custom/list";
@@ -154,6 +153,7 @@
 /* ############### CUSTOM VENDOR STYLES ############### */
 @import "./assets/scss/lib/select2";
 @import "./assets/scss/lib/spectrum";
+@import "./assets/scss/lib/datatables";
 
 /* ############### PAGE LAYOUT STYLES ############### */
 @import "./assets/scss/layout/content";

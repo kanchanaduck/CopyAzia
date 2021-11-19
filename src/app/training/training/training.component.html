@@ -1,42 +1,11 @@
-
-<div class="az-content">
+<div class="az-content az-content-dashboard-ten">
+  <div class="az-content-body">
+  <div class="az-content-body-left">
     <div class="container-fluid">
         <!-- <app-components-sidebar></app-components-sidebar> -->
         <div class="az-content-body d-flex flex-column">
             <!-- <app-breadcrumb></app-breadcrumb> -->
             <h2 class="az-content-title">Training Master Control</h2>
-
-            <div id="accordion" class="accordion" role="tablist" aria-multiselectable="true">
-                <div class="card">
-                  <div class="card-header" role="tab" id="headingOne">
-                    <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Making a Beautiful CSS3 Button Set
-                    </a>
-                  </div><!-- ./card-header -->
-    
-                  <div id="collapseOne" data-parent="#accordion" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="card-body">
-                        
-                        <div>
-                            <div class="wd-sm-300">
-                              <div class="d-md-flex mg-b-20">
-                                <div class="form-group mg-b-0">
-                                  <label class="form-label">Firstname: <span class="tx-danger">*</span></label>
-                                  <input type="text" name="firstname" class="form-control wd-250" placeholder="Enter firstname" required>
-                                </div><!-- form-group -->
-                                <div class="form-group mg-b-0 mg-md-l-20 mg-t-20 mg-md-t-0">
-                                  <label class="form-label">Lastname: <span class="tx-danger">*</span></label>
-                                  <input type="text" name="lastname" class="form-control wd-250" placeholder="Enter lastname" required>
-                                </div><!-- form-group -->
-                              </div><!-- d-flex -->
-                              <button type="submit" class="btn btn-az-primary pd-x-20">Validate Form</button>
-                            </div>
-                          </div>
-
-                    </div><!-- /.card-body -->
-                  </div><!-- /.collapse -->
-                </div><!-- /.card -->
-            </div><!-- /.accordion -->
 
         <table datatable [dtOptions]="dtOptions" class="table table-bordered">
             <thead>
@@ -94,3 +63,148 @@
             
     </div>
 </div>
+</div>
+
+<div class="az-content-body-right">
+  <div class="row mg-b-20">
+    <div class="col">
+      <label class="az-rating-label">Seller Score</label>
+      <h6 class="az-rating-value">98%</h6>
+    </div><!-- col -->
+    <div class="col">
+      <label class="az-rating-label">Rating Score</label>
+      <h6 class="az-rating-value">4.5</h6>
+    </div><!-- col -->
+  </div><!-- row -->
+  <hr class="mg-y-25">
+  <label class="az-content-label tx-base mg-b-25">2 Recent Reviews</label>
+  <div class="az-media-list-reviews">
+    <div class="media">
+      <div class="az-img-user"><img src="https://via.placeholder.com/500" alt=""></div>
+      <div class="media-body">
+        <div class="d-flex justify-content-between mg-b-10">
+          <div>
+            <h6 class="mg-b-0">Socrates Itumay</h6>
+            <div class="az-star-group">
+              <div class="az-star-item"><i class="icon ion-md-star"></i></div>
+              <div class="az-star-item"><i class="icon ion-md-star"></i></div>
+              <div class="az-star-item"><i class="icon ion-md-star"></i></div>
+              <div class="az-star-item"><i class="icon ion-md-star"></i></div>
+              <div class="az-star-item"><i class="icon ion-md-star"></i></div>
+              <span>4.1</span>
+            </div><!-- star-group -->
+          </div>
+          <small>1 hour ago</small>
+        </div>
+        <p class="mg-b-0">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed amet...<a href="">Read more</a></p>
+      </div><!-- media-body -->
+    </div><!-- media -->
+    <div class="media">
+      <div class="az-img-user"><img src="https://via.placeholder.com/500" alt=""></div>
+      <div class="media-body">
+        <div class="d-flex justify-content-between mg-b-10">
+          <div>
+            <h6 class="mg-b-0">Reynante Labares</h6>
+            <div class="az-star-group">
+              <div class="az-star-item"><i class="icon ion-md-star"></i></div>
+              <div class="az-star-item"><i class="icon ion-md-star"></i></div>
+              <div class="az-star-item"><i class="icon ion-md-star"></i></div>
+              <div class="az-star-item"><i class="icon ion-md-star"></i></div>
+              <div class="az-star-item"><i class="icon ion-md-star"></i></div>
+              <span>4.5</span>
+            </div><!-- star-group -->
+          </div>
+          <small>2 days ago</small>
+        </div>
+        <p class="mg-b-0">Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed amet...<a href="">Read more</a></p>
+      </div><!-- media-body -->
+    </div><!-- media -->
+  </div><!-- media-list -->
+
+  <hr class="mg-y-25">
+  <label class="az-content-label tx-base mg-b-25">Activity Stream</label>
+  <div class="az-media-list-activity mg-b-20">
+    <div class="media">
+      <div class="media-icon bg-success"><i class="typcn typcn-tick-outline"></i></div>
+      <div class="media-body">
+        <h6>Successful Purchase</h6>
+        <span>Product ID: #0102</span>
+      </div>
+      <div class="media-right">2 hours</div>
+    </div><!-- media -->
+    <div class="media">
+      <div class="media-icon bg-primary"><i class="typcn typcn-shopping-cart"></i></div>
+      <div class="media-body">
+        <h6>Order Verification</h6>
+        <span>Product ID: #2200</span>
+      </div>
+      <div class="media-right">3 hours</div>
+    </div><!-- media -->
+    <div class="media">
+      <div class="media-icon bg-purple"><i class="typcn typcn-arrow-forward-outline"></i></div>
+      <div class="media-body">
+        <h6>Orders For Shipment</h6>
+        <span>Cleared By: Agent#20</span>
+      </div>
+      <div class="media-right">5 hours</div>
+    </div><!-- media -->
+    <div class="media">
+      <div class="media-icon bg-danger"><i class="typcn typcn-times-outline"></i></div>
+      <div class="media-body">
+        <h6>Purchase Cancellation</h6>
+        <span>Product ID: #0102</span>
+      </div>
+      <div class="media-right">6 hours</div>
+    </div><!-- media -->
+    <div class="media">
+      <div class="media-icon bg-success"><i class="typcn typcn-tick-outline"></i></div>
+      <div class="media-body">
+        <h6>Successful Purchase</h6>
+        <span>Product ID: #2070</span>
+      </div>
+      <div class="media-right">10 hours</div>
+    </div><!-- media -->
+    <div class="media">
+      <div class="media-icon bg-warning"><i class="typcn typcn-tick-outline"></i></div>
+      <div class="media-body">
+        <h6>Overdue Shipments</h6>
+        <span>Reminder from: Agent#30</span>
+      </div>
+      <div class="media-right">18 hours</div>
+    </div><!-- media -->
+    <div class="media">
+      <div class="media-icon bg-danger"><i class="typcn typcn-times-outline"></i></div>
+      <div class="media-body">
+        <h6>Purchase Cancellation</h6>
+        <span>Product ID: #0102</span>
+      </div>
+      <div class="media-right">Yesterday</div>
+    </div><!-- media -->
+    <div class="media">
+      <div class="media-icon bg-info"><i class="typcn typcn-times-outline"></i></div>
+      <div class="media-body">
+        <h6>New Item Added</h6>
+        <span>Department: Wearables</span>
+      </div>
+      <div class="media-right">Yesterday</div>
+    </div><!-- media -->
+    <div class="media">
+      <div class="media-icon bg-orange"><i class="typcn typcn-times-outline"></i></div>
+      <div class="media-body">
+        <h6>New Registered Seller</h6>
+        <span>Seller Name: Socrates</span>
+      </div>
+      <div class="media-right">3 days</div>
+    </div><!-- media -->
+    <div class="media">
+      <div class="media-icon bg-success"><i class="typcn typcn-tick-outline"></i></div>
+      <div class="media-body">
+        <h6>Successful Purchase</h6>
+        <span>Product ID: #2070</span>
+      </div>
+      <div class="media-right">4 days</div>
+    </div><!-- media -->
+  </div><!-- az-media-list-activity -->
+  <a href="" class="btn btn-outline-light btn-block">View All Activities</a>
+</div>
+</div><!-- az-content-body -->

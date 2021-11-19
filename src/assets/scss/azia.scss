@@ -108,7 +108,7 @@
 @import "bootstrap/mixins";
 
 /* ############### BOOTSTRAP FRAMEWORK ############### */
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 // Custom variables and mixins
 @import "custom/variables";
@@ -139,7 +139,6 @@
 @import "custom/accordion";
 @import "custom/buttons";
 @import "custom/charts";
-/* @import "custom/dataTables"; */
 @import "custom/forms";
 @import "custom/image";
 @import "custom/list";
@@ -206,3 +205,9 @@
 @import "util/position";
 @import "util/typography";
 @import "util/width";
+ 
+/* ############### PLUGIN STYLES ############### */
+@import "~morris.js/morris.css";
+// @import "~datatables.net-dt/css/jquery.dataTables.css";
+@import '~@fullcalendar/core/main.css';
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';

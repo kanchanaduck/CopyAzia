@@ -7,15 +7,17 @@ import { DataTablesModule } from 'angular-datatables';
 
 import { TrainingComponent } from './training/training.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ManpowerComponent } from './manpower/manpower.component';
 
 const routes: Routes = [
   { path: '', component: TrainingComponent },
-  // { path: 'locker', component: LockerComponent }
+  { path: 'manpower', component: ManpowerComponent }
 ]
 
 @NgModule({
   declarations: [
-    TrainingComponent
+    TrainingComponent,
+    ManpowerComponent
   ],
   imports: [
     CommonModule,
